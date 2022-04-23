@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>فهرست فیلم ها</title>
+</head>
+<body>
+    <h1>
+        سامانه فروش بلیت سینما
+    </h1>
+    <h3>
+        فهرست فیلم های در حال اکران
+    </h3>
+    {% if movie_list %}
+        <ul>
+        {% for movie in movie_list %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p style="color: red">
+            فیلمی پیدا نشد
+        </p>
+    {% endif %}
+</body>
+</html>
